@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "ed8ae3d7-f45d-4dd5-a913-45f387abfbec",
+		"name": "Hospital_Management_System_SpringBoot",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30753094"
+	},
+	"item": [
+		{
+			"name": "Get Patient By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/api/patient?patientId=Patient1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"patient"
+					],
+					"query": [
+						{
+							"key": "patientId",
+							"value": "Patient1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Patient To Database",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"pId\" : \"\",\n    \"patientName\" : \"Bhanu\",\n    \"patientGender\" : \"Male\",\n    \"patientAge\" : 26,\n    \"patientAddress\" : \"Bageshwar\",\n    \"patientDisease\" : \"Fever\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/patient/addpatient",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"patient",
+						"addpatient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Discharge Patient and delete data from database By PatientId",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/api/patient?patientId=Patient1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"patient"
+					],
+					"query": [
+						{
+							"key": "patientId",
+							"value": "Patient1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Doctor To Database",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"docId\" : \"\",\n    \"docName\":\"Mayank\",\n    \"docDegree\" :\"Ortho\",\n    \"docGender\" : \"Male\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/api/doctor/adddoctor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"doctor",
+						"adddoctor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Doctor By Docter Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/api/doctor?docId=Doctor1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"api",
+						"doctor"
+					],
+					"query": [
+						{
+							"key": "docId",
+							"value": "Doctor1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Doctor Details By docId",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
